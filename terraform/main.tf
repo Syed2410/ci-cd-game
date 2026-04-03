@@ -2,7 +2,7 @@ provider "aws" {
   region = "ap-south-1"
 }
 
-resource "aws_instance" "game_server" {
+resource "aws_instance" "game_rock" {
   ami           = "ami-0ec10929233384c7f" 
   instance_type = "t3.small"
   key_name      = "Jenkins-kp"
