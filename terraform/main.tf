@@ -3,11 +3,11 @@ provider "aws" {
 }
 
 resource "aws_instance" "game_server" {
-  ami           = "ami-019715e0d74f695be" 
-  instance_type = "t3.micro"
+  ami           = "ami-0ec10929233384c7f" 
+  instance_type = "t3.small"
   key_name      = "ubuntu"
 
-  security_groups = [aws_security_group.gamesathe.name]
+  security_groups = [aws_security_group.musthu.name]
 
   user_data = <<-EOF
               #!/bin/bash
@@ -22,8 +22,8 @@ resource "aws_instance" "game_server" {
   }
 }
 
-resource "aws_security_group" "gamesathe" {
-  name = "gamesathe"
+resource "aws_security_group" "musthu" {
+  name = "musthu"
 
   ingress {
     from_port   = 22
