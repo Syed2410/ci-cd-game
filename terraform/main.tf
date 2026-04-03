@@ -18,7 +18,7 @@ resource "aws_instance" "game_rock" {
               EOF
 
   tags = {
-    Name = "Game-Server"
+    Name = "game_rock"
   }
 }
 
@@ -47,5 +47,5 @@ resource "aws_security_group" "musthu" {
   }
 }
 output "public_ip" {
-  value = aws_instance.game_server.public_ip
+  value = aws_instance.game_rock.public_ip
 }
