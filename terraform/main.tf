@@ -1,11 +1,11 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "ap-south-1"
 }
 
 resource "aws_instance" "game_rock" {
-  ami           = "ami-0ec10929233384c7f" 
+  ami           = "ami-05d2d839d4f73aafb" 
   instance_type = "t3.small"
-  key_name      = "Jenkins-kp"
+  key_name      = "jenkins-kp"
 
   security_groups = [aws_security_group.musthu.name]
 
