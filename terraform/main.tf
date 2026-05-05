@@ -2,10 +2,10 @@ provider "aws" {
   region = "ap-south-1"
 }
 
-resource "aws_instance" "game_rock" {
+resource "aws_instance" "game_rock123" {
   ami           = "ami-05d2d839d4f73aafb" 
   instance_type = "t3.small"
-  key_name      = "jenkins-kp"
+  key_name      = "ubuntu"
 
   security_groups = [aws_security_group.musthu.name]
 
@@ -18,7 +18,7 @@ resource "aws_instance" "game_rock" {
               EOF
 
   tags = {
-    Name = "game_rock"
+    Name = "game_rock123"
   }
 }
 
@@ -47,5 +47,5 @@ resource "aws_security_group" "musthu" {
   }
 }
 output "public_ip" {
-  value = aws_instance.game_rock.public_ip
+  value = aws_instance.game_rock123.public_ip
 }
